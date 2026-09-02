@@ -4,23 +4,26 @@ I build the systems behind B2B demand generation — lead capture and routing, a
 hygiene, campaign infrastructure, and the reporting that says which of it actually worked — and then
 I run them.
 
-Five of those systems are rebuilt here as **working demos**. Not screenshots and not mockups: each
+Six of those systems are rebuilt here as **working demos**. Not screenshots and not mockups: each
 one runs in the browser, has a real test suite, and sits on a deterministic engine, so identical
 input always produces identical output. Every dataset in them is synthetic. They are clean-room
 reconstructions of systems I built and operated in production — none of them contain any employer's
 code, data or customers.
+
+**One-page index of all six: [somesh-systems.vercel.app](https://somesh-systems.vercel.app)**
 
 ## The demos
 
 | System | What it does | |
 |---|---|---|
 | **LeadFlow** | Multi-channel capture → canonical-source attribution → identity resolution → routing. Solves "same person, three forms, two email addresses" without fuzzy-matching strangers into one record. | [Live](https://leadflow-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/leadflow) |
-| **Funnel Doctor** | Finds the internal traffic polluting your product analytics, and the tracking that silently stopped firing. Reports evidence for each finding, not a verdict you have to trust. | [Live](https://funnel-doctor-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/funnel-doctor) |
-| **Daily Pulse** | One daily marketing report a founder will actually read: funnel-leak detection, SLA watch, and a flat refusal to compute a day-over-day change against a stale snapshot. | [Live](https://daily-pulse-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/daily-pulse) |
-| **ListForge** | Segment before you load. Live DNS MX lookups and catch-all detection, so the clean cohort sends first instead of the whole list burning a sending domain. | [Live](https://listforge-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/listforge) |
+| **Funnel Doctor** | Finds the internal traffic polluting your product analytics, and the tracking that silently stopped firing. Reports evidence for each finding, not a verdict you have to trust. | [Live](https://funnel-doctor-demo.vercel.app) · [Code](https://github.com/callmesomesh/funnel-doctor) |
+| **Daily Pulse** | One daily marketing report a founder will actually read: funnel-leak detection, SLA watch, and a flat refusal to compute a day-over-day change against a stale snapshot. | [Live](https://daily-pulse-demo.vercel.app) · [Code](https://github.com/callmesomesh/daily-pulse) |
+| **ListForge** | Segment before you load. Live DNS MX lookups and catch-all detection, so the clean cohort sends first instead of the whole list burning a sending domain. | [Live](https://listforge-demo.vercel.app) · [Code](https://github.com/callmesomesh/listforge) |
 | **SafeSend WA** | A broadcast engine you can stop. Opt-in enforced, opt-outs permanently suppressed, cross-run dedup, hard daily cap, rate limit, dry-run by default — and a kill switch that leaves resumable state. | [Live](https://safesend-wa-demo.vercel.app) · [Code](https://github.com/callmesomesh/safesend-wa) |
+| **HeroMatch** | One landing URL whose hero rewrites to match the paid click that brought the visitor — while organic traffic and search engines always see the one canonical page. Click IDs beat UTMs; unknown signals fall back loudly. | [Live](https://heromatch-demo.vercel.app) · [Code](https://github.com/callmesomesh/heromatch) |
 
-## Why these five
+## Why these six
 
 Each one exists because the underlying problem cost me something first.
 
@@ -39,6 +42,9 @@ Each one exists because the underlying problem cost me something first.
 - **SafeSend WA** exists because the production version ran on a company's *real inbound* WhatsApp
   number. A bug there would not have cost a campaign, it would have cost the channel — so the
   refusals, not the sending, are the product.
+- **HeroMatch** exists because a paid click is a promise, and a generic homepage under every
+  campaign breaks it. The production original rewrote the hero for paid arrivals while search
+  engines always saw one canonical page.
 
 ## What I do
 
