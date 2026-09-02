@@ -16,7 +16,7 @@ code, data or customers.
 
 | System | What it does | |
 |---|---|---|
-| **LeadFlow** | Multi-channel capture → canonical-source attribution → identity resolution → routing. Solves "same person, three forms, two email addresses" without fuzzy-matching strangers into one record. | [Live](https://leadflow-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/leadflow) |
+| **LeadFlow** | Multi-channel capture → canonical-source attribution → identity resolution → routing. Solves "same person, three forms, two email addresses" without fuzzy-matching strangers into one record. | [Live](https://somesh-leadflow.vercel.app) · [Code](https://github.com/callmesomesh/leadflow) |
 | **Funnel Doctor** | Finds the internal traffic polluting your product analytics, and the tracking that silently stopped firing. Reports evidence for each finding, not a verdict you have to trust. | [Live](https://funnel-doctor-demo.vercel.app) · [Code](https://github.com/callmesomesh/funnel-doctor) |
 | **Daily Pulse** | One daily marketing report a founder will actually read: funnel-leak detection, SLA watch, and a flat refusal to compute a day-over-day change against a stale snapshot. | [Live](https://daily-pulse-demo.vercel.app) · [Code](https://github.com/callmesomesh/daily-pulse) |
 | **ListForge** | Segment before you load. Live DNS MX lookups and catch-all detection, so the clean cohort sends first instead of the whole list burning a sending domain. | [Live](https://listforge-demo.vercel.app) · [Code](https://github.com/callmesomesh/listforge) |
