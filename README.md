@@ -1,9 +1,10 @@
 # Somesh Samanta
 
 I build the systems behind B2B demand generation — lead capture and routing, attribution, list
-hygiene, and the reporting that says which of it actually worked — and then I run them.
+hygiene, campaign infrastructure, and the reporting that says which of it actually worked — and then
+I run them.
 
-Four of those systems are rebuilt here as **working demos**. Not screenshots and not mockups: each
+Five of those systems are rebuilt here as **working demos**. Not screenshots and not mockups: each
 one runs in the browser, has a real test suite, and sits on a deterministic engine, so identical
 input always produces identical output. Every dataset in them is synthetic. They are clean-room
 reconstructions of systems I built and operated in production — none of them contain any employer's
@@ -17,8 +18,9 @@ code, data or customers.
 | **Funnel Doctor** | Finds the internal traffic polluting your product analytics, and the tracking that silently stopped firing. Reports evidence for each finding, not a verdict you have to trust. | [Live](https://funnel-doctor-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/funnel-doctor) |
 | **Daily Pulse** | One daily marketing report a founder will actually read: funnel-leak detection, SLA watch, and a flat refusal to compute a day-over-day change against a stale snapshot. | [Live](https://daily-pulse-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/daily-pulse) |
 | **ListForge** | Segment before you load. Live DNS MX lookups and catch-all detection, so the clean cohort sends first instead of the whole list burning a sending domain. | [Live](https://listforge-demo-someshs-projects-04586766.vercel.app) · [Code](https://github.com/callmesomesh/listforge) |
+| **SafeSend WA** | A broadcast engine you can stop. Opt-in enforced, opt-outs permanently suppressed, cross-run dedup, hard daily cap, rate limit, dry-run by default — and a kill switch that leaves resumable state. | [Live](https://safesend-wa-demo.vercel.app) · [Code](https://github.com/callmesomesh/safesend-wa) |
 
-## Why these four
+## Why these five
 
 Each one exists because the underlying problem cost me something first.
 
@@ -34,14 +36,17 @@ Each one exists because the underlying problem cost me something first.
 - **ListForge** exists because catch-all domains accept mail for any address, so per-mailbox
   verification tools mark every guess as valid. On one list, 41 of 147 contacts were catch-all —
   held back rather than sent to.
+- **SafeSend WA** exists because the production version ran on a company's *real inbound* WhatsApp
+  number. A bug there would not have cost a campaign, it would have cost the channel — so the
+  refusals, not the sending, are the product.
 
 ## What I do
 
-Four years in B2B marketing. I started as an SDR — demos booked cold, hundreds of rejections — then
-moved into building everything around the sale: positioning and messaging, outbound, paid, events,
-the CRM and the automation underneath. Currently running GTM at a spatial-intelligence platform.
-Before that I built a construction-SaaS demand-generation motion largely solo; it kept running after
-I left, which is the test I hold this work to.
+Four years in B2B marketing. I started as an SDR — 130+ demos booked cold, hundreds of rejections —
+then moved into building everything around the sale: positioning and messaging, outbound, paid,
+events, the CRM and the automation underneath. Currently running GTM at a spatial-intelligence
+platform. Before that I built a construction-SaaS demand-generation motion largely solo; it kept
+running after I left, which is the test I hold this work to.
 
 Published in [NBM&CW](https://www.nbmcw.com/product-technology/technologies-digitilization-software/digital-technologies-bridging-the-gap-between-plan-and-execution.html)
 (June 2026), carried alongside the Managing Directors of JCB India, Sany India, Terex India and
